@@ -136,9 +136,14 @@ namespace TomCafe_Assignement
         }
 
         private void addButton_Click(object sender, RoutedEventArgs e)
-        { 
+        {
+
+            //OrderList c = new OrderItem((MenuItem)itemsListView.SelectedItem );
             OrderItem c = new OrderItem((MenuItem)itemsListView.SelectedItem);
+            OrderList.Add(c);
             cartsListView.ItemsSource = null;
+            cartsListView.ItemsSource = OrderList;
+    
         }
 
         private void orderButton_Click(object sender, RoutedEventArgs e)
